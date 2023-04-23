@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="ceis.css">
+  <link rel="shortcut icon" href="#">
+  <title>MEME FEST</title>
+</head>
+<body>
+  <div class="contenedor">
+    <div class="cont">
+      <div class="formulario">
+        <form id="formulario" action = "http://localhost:5500" method = "POST">
+          <label for="nombre" id="nombre_label">NOMBRE:</label>
+          <input type="text" id="nombre" name="nombre"><br><br>
+
+          <label for="apellido" id="apellido_label">APELLIDO:</label>
+          <input type="text" id="apellido" name="apellido"><br><br>
+
+          <label for="cedula" id="cedula_label">CEDULA:</label>
+          <input type="text" id="cedula" name="cedula"><br><br>
+
+          <label for="email" id="email_label">EMAIL:</label>
+          <input type="email" id="email" name="email"><br><br>
+
+          <div class="cont_boton">
+            <div class="cont_boton2">
+              <button type="submit" id="boton">ENVIAR</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="inserts.js"></script>
+</body>
+</html>
