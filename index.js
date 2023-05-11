@@ -1,18 +1,20 @@
 const express = require('express');
 const inserts = require('./inserts');
+const cors = require('cors')
 
 const app = express();
-const port = 3000;
 
-// definir rutas y configuración de express aquí
+app.use(cors());
+
 app.use(express.static(__dirname));
 
-// ejemplo de cómo utilizar inserts.js en el servidor
-app.post('/', (req, res) => {
-  inserts.insertarDatos(req.body);
-  res.send('Datos insertados correctamente');
+app.get('/inserts.js', function(req, res) {
+  res.set('Content-Type', 'text/javascript');
+  res.sendFile(__dirname + '/inserts.js');
 });
 
+const port = 5500; // El puerto que quieras utilizar
 app.listen(port, () => {
   console.log(`Servidor iniciado en http://localhost:${port}`);
 });
+

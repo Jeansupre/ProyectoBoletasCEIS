@@ -61,22 +61,5 @@ const Boletas = new mongoose.model('boletas', MemeFestCEISSchema)
 // )
 
 //Configuración del servidor express
-const app = express();
-
-app.use(express.static(__dirname));
-
-app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/index.html');
-  });
-
-app.get('/inserts.js', function(req, res) {
-  res.set('Content-Type', 'text/javascript');
-  res.sendFile(__dirname + '/inserts.js');
-});
-
-const port = 5500; // El puerto que quieras utilizar
-app.listen(port, () => {
-  console.log(`Servidor iniciado en http://localhost:${port}`);
-});
 
 module.exports = {Boletas};
